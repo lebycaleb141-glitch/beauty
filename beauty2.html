@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maison Aura | Hair &amp; Beauty Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#2b1233;--plum2:#451a52;--orchid:#b4457a;--gold:#e0b872;--bg:#fff8fb;--ink:#2b1233;--muted:#6f5a78;--card:#ffffff;--line:#ecd9e3;--blush:#f7e1ea;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a0b20;--ink:#f8e9f0;--muted:#c3a9ce;--card:#27112f;--line:#43224f;--blush:#33173d}}
+:root[data-theme="dark"]{--bg:#1a0b20;--ink:#f8e9f0;--muted:#c3a9ce;--card:#27112f;--line:#43224f;--blush:#33173d}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Jost,system-ui,sans-serif;font-size:17px;line-height:1.65}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05;margin:0}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+ 
+/* header */
+header{position:fixed;top:0;left:0;right:0;z-index:10;padding-top:env(safe-area-inset-top,0px);background:rgba(43,18,51,.88);backdrop-filter:blur(10px);color:#fff8fb}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:28px;font-weight:600;text-decoration:none;letter-spacing:.02em}
+.logo span{color:var(--gold);font-style:italic}
+nav{display:flex;gap:26px;align-items:center}
+nav a{text-decoration:none;font-size:15px;opacity:.85}
+nav a:hover{opacity:1;color:var(--gold)}
+.btn{display:inline-block;background:var(--gold);color:var(--plum);padding:13px 28px;border-radius:999px;font-weight:500;text-decoration:none;border:0;font:inherit;font-weight:500;cursor:pointer;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px);background:#f0cf90}
+nav .btn{padding:9px 20px;opacity:1}
+nav a.btn:hover{color:var(--plum)}
+.ghost{background:transparent;color:#fff8fb;border:1.5px solid rgba(255,248,251,.5)}
+.ghost:hover{background:rgba(255,255,255,.1)}
+ 
+/* hero */
+.hero{background:radial-gradient(900px 500px at 85% 20%,var(--plum2),transparent 70%),var(--plum);color:#fff8fb;padding:150px 0 90px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(46px,7vw,92px);letter-spacing:-.01em}
+.hero h1 em{color:var(--gold)}
+.hero p{max-width:46ch;font-size:19px;color:#e8d3ee;margin:24px 0 34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.arches{position:relative;height:460px}
+.arch{position:absolute;border-radius:999px 999px 24px 24px;border:1.5px solid rgba(224,184,114,.55)}
+.a1{width:56%;height:78%;left:0;bottom:0;background:linear-gradient(170deg,#b4457a,#5a1f5e 70%)}
+.a2{width:48%;height:92%;right:0;bottom:0;background:linear-gradient(170deg,#f7e1ea,#e0b872 130%);border-color:transparent}
+.a3{width:30%;height:44%;left:38%;bottom:0;background:linear-gradient(170deg,#2b1233,#451a52);z-index:2}
+.arches small{position:absolute;z-index:3;left:6%;top:38%;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:26px;color:#fff8fb;max-width:9ch;line-height:1.1}
+.stamp{position:absolute;z-index:3;right:4%;top:14%;width:96px;height:96px;border-radius:50%;background:var(--plum);color:var(--gold);display:grid;place-items:center;text-align:center;font-size:13px;line-height:1.2;border:1.5px solid var(--gold)}
+.stamp b{font-family:"Cormorant Garamond",serif;font-size:30px;display:block;font-weight:600}
+ 
+section{padding:96px 0}
+.head{max-width:620px;margin-bottom:48px}
+.head h2{font-size:clamp(36px,5vw,58px)}
+.head p{color:var(--muted);margin:14px 0 0}
+ 
+/* services */
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.group{background:var(--card);border:1px solid var(--line);border-radius:28px 28px 8px 8px;padding:34px}
+.group h3{font-size:34px;margin-bottom:6px;color:var(--orchid)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .group h3{color:#e58fbc}}
+.group>p{margin:0 0 18px;color:var(--muted);font-size:15px}
+.row{display:flex;align-items:baseline;gap:10px;padding:9px 0}
+.row i{flex:1;border-bottom:1.5px dotted var(--line);transform:translateY(-4px)}
+.row b{font-weight:500;white-space:nowrap}
+.row span{white-space:nowrap}
+.note{margin-top:22px;color:var(--muted);font-size:15px}
+ 
+/* gallery */
+.gallery{background:var(--blush)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:end}
+.tile{border-radius:999px 999px 18px 18px;aspect-ratio:3/4.2;display:flex;align-items:flex-end;justify-content:center;padding:22px 10px;color:#fff;font-family:"Cormorant Garamond",serif;font-size:26px;font-style:italic;text-align:center}
+.tile:nth-child(1){background:linear-gradient(160deg,#b4457a,#2b1233)}
+.tile:nth-child(2){background:linear-gradient(160deg,#e0b872,#a8567a);color:var(--plum);aspect-ratio:3/5}
+.tile:nth-child(3){background:linear-gradient(160deg,#451a52,#b4457a)}
+.tile:nth-child(4){background:linear-gradient(160deg,#f2b8cf,#6a2a73);aspect-ratio:3/4.6}
+.tile:nth-child(5){background:linear-gradient(160deg,#6a2a73,#2b1233)}
+.tile:nth-child(6){background:linear-gradient(160deg,#d98aa9,#e0b872);color:var(--plum);aspect-ratio:3/4.8}
+.tile:nth-child(7){background:linear-gradient(160deg,#2b1233,#b4457a)}
+.tile:nth-child(8){background:linear-gradient(160deg,#e0b872,#451a52)}
+.hint{margin-top:22px;color:var(--muted);font-size:14px}
+ 
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about h2{font-size:clamp(36px,5vw,58px);margin-bottom:18px}
+.about p{color:var(--muted);margin:0 0 16px}
+.facts{display:grid;gap:14px}
+.fact{border-left:3px solid var(--gold);padding:6px 0 6px 20px;background:var(--card);border-radius:0 14px 14px 0}
+.fact h3{font-size:26px}
+.fact p{margin:2px 0 0;font-size:15px}
+ 
+/* reviews */
+.reviews{background:var(--plum);color:#fff8fb}
+.reviews .head p{color:#d9bfe2}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+blockquote{margin:0;padding:30px;border-radius:8px 28px 8px 28px;background:rgba(255,255,255,.06);border:1px solid rgba(224,184,114,.3)}
+blockquote p{font-family:"Cormorant Garamond",serif;font-size:23px;line-height:1.3;margin:0 0 16px}
+blockquote cite{font-style:normal;color:var(--gold);font-size:15px}
+ 
+/* booking */
+.book .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px}
+.book h2{font-size:clamp(36px,5vw,58px);margin-bottom:16px}
+.book p{color:var(--muted)}
+.hours{margin-top:26px;border-top:1px solid var(--line)}
+.hours div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line)}
+form{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:34px;display:grid;gap:16px}
+label{font-size:15px;display:grid;gap:6px}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--orchid);box-shadow:0 0 0 3px rgba(180,69,122,.25)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .btn{background:var(--plum);color:#fff8fb;padding:15px;width:100%}
+form .btn:hover{background:var(--orchid)}
+.ok{display:none;color:var(--orchid);font-size:15px;margin:0}
+ 
+footer{background:var(--plum);color:#d9bfe2;padding:40px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--gold)}
+ 
+@media (max-width:860px){
+ .hero .wrap,.about .wrap,.book .wrap,.menu,.quotes{grid-template-columns:1fr}
+ .arches{height:340px}
+ .grid{grid-template-columns:repeat(2,1fr)}
+ nav a:not(.btn){display:none}
+ section{padding:70px 0}.hero{padding-top:120px}
+ .two{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:no-preference){
+ .arch{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) both}.a2{animation-delay:.15s}.a3{animation-delay:.3s}
+ @keyframes rise{from{transform:translateY(60px);opacity:0}}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+ 
+/* reviews form and admin */
+.reviews form{margin-top:40px;max-width:620px}
+.reviews form h3{color:var(--ink);font-size:30px}
+#admin{position:fixed;inset:0;z-index:50;display:none;background:rgba(20,6,26,.75);overflow:auto;padding:max(16px,env(safe-area-inset-top)) 16px 24px}
+#admin.on{display:block}
+.ap{max-width:780px;margin:0 auto;background:var(--bg);color:var(--ink);border-radius:20px;padding:24px;display:grid;gap:14px}
+.ab,.tb,.ar2,.ab2{display:flex;gap:8px;flex-wrap:wrap}
+.ab{justify-content:space-between;align-items:center}
+.ab h2{font-size:36px}
+.ap button{font:inherit;font-size:15px;padding:8px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.ap button:hover{border-color:var(--orchid)}
+.ap button.on,.ap button.pri{background:var(--plum);border-color:var(--plum);color:#fff8fb}
+.ap fieldset{border:1px solid var(--line);border-radius:14px;margin:0;padding:16px;display:grid;gap:10px;background:var(--card)}
+.ap fieldset span{color:var(--muted)}
+.ar{display:grid;grid-template-columns:1fr 140px auto;gap:8px}
+.muted{color:var(--muted);font-size:15px;margin:0}
+@media (max-width:640px){.ar{grid-template-columns:1fr 1fr}.ar button{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <a class="logo" href="#top">Maison <span>Aura</span></a>
+  <nav>
+   <a href="#services">Services</a><a href="#work">Our work</a><a href="#about">About</a><a href="#reviews">Reviews</a>
+   <a class="btn" href="#book">Book now</a>
+  </nav>
+ </div>
+</header>
+ 
+<main id="top">
+<div class="hero">
+ <div class="wrap">
+  <div>
+   <h1>Hair and beauty,<br>done with <em>care.</em></h1>
+   <p>From braids and colour to bridal makeup and nails, our stylists work with you to find the look that feels like yours, and keep it looking good long after you leave.</p>
+   <div class="cta"><a class="btn" href="#book">Book an appointment</a><a class="btn ghost" href="#services">See services and prices</a></div>
+  </div>
+  <div class="arches" aria-hidden="true">
+   <div class="arch a1"></div><div class="arch a2"></div><div class="arch a3"></div>
+   <small>Your best day, every day.</small>
+   <div class="stamp"><div><b>8+</b>years of<br>styling</div></div>
+  </div>
+ </div>
+</div>
+ 
+<section id="services">
+ <div class="wrap">
+  <div class="head"><h2>Services and prices</h2><p>Simple, clear pricing. Final price depends on hair length and thickness, and we confirm it before we start.</p></div>
+  <div class="menu" id="menu"></div>
+  <p class="note">Prices are a guide and we confirm the final price before we start. Ask about our package for brides, mothers and bridesmaids.</p>
+ </div>
+</section>
+ 
+<section id="work" class="gallery">
+ <div class="wrap">
+  <div class="head"><h2>Our work</h2><p>A few of the looks our clients ask for most.</p></div>
+  <div class="grid">
+   <div class="tile">Knotless braids</div><div class="tile">Honey balayage</div><div class="tile">Bridal updo</div><div class="tile">Glam makeup</div>
+   <div class="tile">Silk press</div><div class="tile">Gel nails</div><div class="tile">Natural twists</div><div class="tile">Soft curls</div>
+  </div>
+  <p class="hint">These are placeholder tiles. Replace them with photos of your own work.</p>
+ </div>
+</section>
+ 
+<section id="about" class="about">
+ <div class="wrap">
+  <div>
+   <h2>A calm place to get your look right</h2>
+   <p>Maison Aura is a small studio run by stylists who love their craft. We listen first, then recommend what suits your hair, skin and routine, not just what is trending.</p>
+   <p>We use quality products, keep our tools clean, and book each client enough time so nothing is rushed.</p>
+   <a class="btn" style="background:var(--plum);color:#fff8fb" href="#book">Book your visit</a>
+  </div>
+  <div class="facts">
+   <div class="fact"><h3>Consultation first</h3><p>We talk through your hair goals and budget before we begin.</p></div>
+   <div class="fact"><h3>Quality products</h3><p>Gentle, trusted brands chosen for your hair type and skin.</p></div>
+   <div class="fact"><h3>On time, every time</h3><p>Booked appointments start when they should.</p></div>
+  </div>
+ </div>
+</section>
+ 
+<section id="reviews" class="reviews">
+ <div class="wrap">
+  <div class="head"><h2>What clients say</h2><p>Kind words from the people we've styled.</p></div>
+  <div class="quotes" id="quotes"></div>
+  <form id="rf">
+   <h3>Leave us a review</h3>
+   <label>Your name<input id="rn" required></label>
+   <label>Your review<textarea id="rt" rows="3" required></textarea></label>
+   <button class="btn" type="submit">Send review on WhatsApp</button>
+  </form>
+ </div>
+</section>
+ 
+<section id="book" class="book">
+ <div class="wrap">
+  <div>
+   <h2>Book your appointment</h2>
+   <p>Tell us what you'd like and when. Your request opens in WhatsApp so we can confirm your time quickly.</p>
+   <div class="hours">
+    <div><span>Monday to Friday</span><span>8:00 am to 7:00 pm</span></div>
+    <div><span>Saturday</span><span>8:00 am to 8:00 pm</span></div>
+    <div><span>Sunday</span><span>10:00 am to 4:00 pm</span></div>
+   </div>
+  </div>
+  <form id="f">
+   <div class="two">
+    <label>Your name<input id="n" required autocomplete="name"></label>
+    <label>Phone number<input id="p" type="tel" required autocomplete="tel"></label>
+   </div>
+   <label>Service
+    <select id="s"><option>Haircut and styling</option><option>Hair colour</option><option>Braids</option><option>Weave or wig install</option><option>Makeup</option><option>Bridal package</option><option>Nails</option><option>Facial or skin care</option></select>
+   </label>
+   <div class="two">
+    <label>Preferred date<input id="d" type="date" required></label>
+    <label>Preferred time<input id="t" type="time" required></label>
+   </div>
+   <label>Anything we should know? <textarea id="m" rows="3" placeholder="Hair length, inspiration, allergies…"></textarea></label>
+   <button class="btn" type="submit">Send booking request</button>
+   <p class="ok" id="ok">Opening WhatsApp with your request.</p>
+  </form>
+ </div>
+</section>
+</main>
+ 
+<footer>
+ <div class="wrap">
+  <div><b style="color:#fff8fb;font-family:'Cormorant Garamond',serif;font-size:22px">Maison Aura</b><br>Hair and beauty studio</div>
+  <div>Call or WhatsApp: <a id="tel" href="#"></a><br><a href="#" id="adm">Admin login</a></div>
+ </div>
+</footer>
+ 
+<div id="admin"></div>
+<script type="application/json" id="site-data">{"whatsapp": "254114980301", "pass": "admin123", "groups": [{"name": "Hair", "desc": "Cuts, colour and styling for every hair type.", "items": [{"n": "twists", "p": "from 600"}, {"n": "knotles", "p": "from 800"}, {"n": "braid", "p": "from 800"}, {"n": "Deep treatment and wash", "p": "from 1,200"}, {"n": "Silk press and straightening", "p": "from 500"}]}, {"name": "Braids and weaves", "desc": "Protective styles, neatly done and made to last.", "items": [{"n": "Box braids", "p": "from 1200"}, {"n": "Cornrows", "p": "from 200"}, {"n": "locks installation and locs maintenance", "p": "from 2500"}, {"n": "Weave install", "p": "from 1500"}, {"n": "Wig install and styling", "p": "from 2,000"}]}, {"name": "Makeup", "desc": "Soft day looks to full glam, for any occasion.", "items": [{"n": "Bridal party (per person)", "p": "from 3,000"}]}, {"name": "Nails and skin", "desc": "Clean, relaxing treatments for hands, feet and face.", "items": [{"n": "Manicure", "p": "from 500"}, {"n": "Pedicure", "p": "from 500"}, {"n": "Gel and acrylic nails", "p": "from 700"}, {"n": "Facial and skin cleanse", "p": "from 1,000"}, {"n": "Lashes and brow shaping", "p": "from 500"}]}], "reviews": [{"name": "Amina, regular client", "text": "My braids lasted six weeks and still looked neat. I'm never going anywhere else."}, {"name": "Grace, bride", "text": "They made my wedding morning calm. The makeup stayed perfect all day."}, {"name": "Wanjiru, colour client", "text": "Finally someone who listened. My colour is exactly what I imagined."}]}</script>
+<script>
+var $=function(i){return document.getElementById(i)};
+var D=JSON.parse($("site-data").textContent);
+try{var dr=localStorage.getItem("aura_draft");if(dr)D=JSON.parse(dr)}catch(e){}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function num(){return D.whatsapp.replace(/\D/g,"")}
+function wa(msg){window.open("https://wa.me/"+num()+"?text="+encodeURIComponent(msg),"_blank","noopener")}
+function save(){try{localStorage.setItem("aura_draft",JSON.stringify(D))}catch(e){}}
+ 
+function render(){
+ $("menu").innerHTML=D.groups.map(function(g){return '<div class="group"><h3>'+esc(g.name)+'</h3><p>'+esc(g.desc)+'</p>'+g.items.map(function(i){return '<div class="row"><b>'+esc(i.n)+'</b><i></i><span>'+esc(i.p)+'</span></div>'}).join("")+'</div>'}).join("");
+ $("quotes").innerHTML=D.reviews.map(function(r){return '<blockquote><p>'+esc(r.text)+'</p><cite>'+esc(r.name)+'</cite></blockquote>'}).join("");
+ $("s").innerHTML=D.groups.map(function(g){return '<optgroup label="'+esc(g.name)+'">'+g.items.map(function(i){return '<option>'+esc(i.n)+'</option>'}).join("")+'</optgroup>'}).join("");
+ $("tel").href="tel:+"+num();$("tel").textContent="+"+num();
+}
+render();
+ 
+/* bookings and reviews go to WhatsApp */
+$("f").addEventListener("submit",function(e){
+ e.preventDefault();
+ var v=function(i){return $(i).value.trim()};
+ $("ok").style.display="block";
+ wa("Hello, I would like to book.\nName: "+v("n")+"\nPhone: "+v("p")+"\nService: "+v("s")+"\nDate: "+v("d")+"\nTime: "+v("t")+(v("m")?"\nNotes: "+v("m"):""));
+});
+$("rf").addEventListener("submit",function(e){
+ e.preventDefault();
+ wa("New review for the website\nName: "+$("rn").value.trim()+"\nReview: "+$("rt").value.trim());
+ e.target.reset();
+});
+$("d").min=new Date().toISOString().split("T")[0];
+ 
+/* admin panel */
+var P=$("admin"),tab="prices";
+function inp(a,v){return '<input '+a+' value="'+esc(v)+'">'}
+function panel(){
+ var h='<div class="ap"><div class="ab"><h2>Admin</h2><div class="tb">'+["prices","reviews","settings"].map(function(t){return '<button data-tab="'+t+'" class="'+(t==tab?"on":"")+'">'+t[0].toUpperCase()+t.slice(1)+'</button>'}).join("")+'<button data-a="x">Close</button></div></div>';
+ if(tab=="prices"){
+  h+=D.groups.map(function(g,gi){
+   return '<fieldset>'+inp('data-g="'+gi+'" data-f="name" aria-label="Category name"',g.name)+inp('data-g="'+gi+'" data-f="desc" aria-label="Category note"',g.desc)+
+   g.items.map(function(it,ii){var a='data-g="'+gi+'" data-i="'+ii+'"';
+    return '<div class="ar">'+inp(a+' data-f="n" aria-label="Service"',it.n)+inp(a+' data-f="p" aria-label="Price"',it.p)+'<button '+a+' data-a="di" aria-label="Remove service">Remove</button></div>'}).join("")+
+   '<div class="ar2"><button data-g="'+gi+'" data-a="ai">Add service</button><button data-g="'+gi+'" data-a="dg">Delete category</button></div></fieldset>'}).join("")+'<button data-a="ag">Add category</button>';
+ }
+ if(tab=="reviews"){
+  h+='<p class="muted">Reviews your clients write on the website arrive in your WhatsApp. Add the ones you want to show on the site.</p>'+
+  D.reviews.map(function(r,ri){return '<fieldset><b>'+esc(r.name)+'</b><span>'+esc(r.text)+'</span><div class="ar2"><button data-r="'+ri+'" data-a="dr">Remove from website</button></div></fieldset>'}).join("")+
+  '<fieldset><b>Add a review</b><input id="an" placeholder="Client name"><textarea id="at" rows="3" placeholder="Review text"></textarea><div class="ar2"><button data-a="ar">Add to website</button></div></fieldset>';
+ }
+ if(tab=="settings"){
+  h+='<fieldset><label>WhatsApp number for bookings and reviews (country code first, digits only)'+inp('data-root="whatsapp"',D.whatsapp)+'</label><label>Admin password'+inp('data-root="pass"',D.pass)+'</label></fieldset>';
+ }
+ h+='<div class="ab2"><button class="pri" data-a="dl">Download updated website</button><button data-a="rs">Discard my changes</button></div><p class="muted">Changes are saved in this browser as you type. Visitors see them after you upload the downloaded index.html to your hosting.</p></div>';
+ P.innerHTML=h;P.className="on";
+}
+P.addEventListener("input",function(e){
+ var d=e.target.dataset;
+ if(d.root)D[d.root]=e.target.value;
+ else if(d.g!==undefined&&d.f){(d.i!==undefined?D.groups[d.g].items[d.i]:D.groups[d.g])[d.f]=e.target.value}
+ else return;
+ save();render();
+});
+P.addEventListener("click",function(e){
+ var b=e.target.closest("button");if(!b)return;
+ var d=b.dataset,a=d.a;
+ if(d.tab){tab=d.tab;return panel()}
+ if(a=="x"){P.className="";P.innerHTML="";return}
+ if(a=="rs"){if(confirm("Discard all unsaved changes and go back to the published version?")){try{localStorage.removeItem("aura_draft")}catch(x){}location.reload()}return}
+ if(a=="dl"){download();return}
+ if(a=="di")D.groups[d.g].items.splice(d.i,1);
+ if(a=="ai")D.groups[d.g].items.push({n:"New service",p:"from 0"});
+ if(a=="dg"){if(!confirm("Delete this whole category?"))return;D.groups.splice(d.g,1)}
+ if(a=="ag")D.groups.push({name:"New category",desc:"",items:[{n:"New service",p:"from 0"}]});
+ if(a=="dr")D.reviews.splice(d.r,1);
+ if(a=="ar"){var n=$("an").value.trim(),t=$("at").value.trim();if(!n||!t)return;D.reviews.push({name:n,text:t})}
+ save();render();panel();
+});
+function download(){
+ var c=document.documentElement.cloneNode(true);
+ c.querySelector("#site-data").textContent=JSON.stringify(D).replace(/</g,"\\u003c");
+ ["menu","quotes","admin","s"].forEach(function(i){c.querySelector("#"+i).innerHTML=""});
+ c.querySelector("#admin").className="";
+ var a=document.createElement("a");
+ a.href=URL.createObjectURL(new Blob(["<!DOCTYPE html>\n"+c.outerHTML],{type:"text/html"}));
+ a.download="index.html";document.body.appendChild(a);a.click();a.remove();
+}
+$("adm").addEventListener("click",function(e){
+ e.preventDefault();
+ var p=prompt("Admin password");
+ if(p===null)return;
+ if(p===D.pass)panel();else alert("Wrong password");
+});
+</script>
+ 
+</body>
+</html>
+ 
